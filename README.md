@@ -57,8 +57,8 @@ NanGBD 系列支持 Windows、Linux、Mac、Android、iOS、ARM 全平台。
 
 
 2. 编译 GmSSL  
-   进入 library/src/main/sh/ 目录，运行 bash ./build-gmssl4android.sh 将生成全部架构的包，包括 armeabi-v7a、arm64-v8a、x86、x86_64。
-   也可以添加运行参数如：bash ./build-gmssl4android.sh [arg1-arch] [arg1-abi] [arg2-api]，其中：
+   进入 library/src/main/sh/ 目录，运行 `bash ./build-gmssl4android.sh` 将生成全部架构的包，包括 armeabi-v7a、arm64-v8a、x86、x86_64。
+   也可以添加运行参数如：`bash ./build-gmssl4android.sh [arg1-arch] [arg1-abi] [arg2-api]`，其中：
 
    * [arg1-arch] 表示安卓架构，可选项为：arm、arm64、x86、x86_64、mips、mips64
    * [arg1-abi]  表示安卓 ABI，可选项为：armeabi-v7a、arm64-v8a、x86、x86_64、mips、mips64
