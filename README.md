@@ -53,7 +53,7 @@ NanGBD 系列支持 Windows、Linux、Mac、Android、iOS、ARM 全平台。
 0. 准备环境
    * 安装 Android Studio 工具 和 java8 + 环境。
    * 修改 local.properties 中的 sdk.dir（安卓 sdk 路径）与 ndk.dir（安卓 ndk 路径），如：
-     `sdk.dir=/Users/Nanuns/Library/Android/sdk`
+     `sdk.dir=/Users/Nanuns/Library/Android/sdk`  
      `ndk.dir=/Users/Nanuns/Library/Android/sdk/ndk-bundle`
 
 
