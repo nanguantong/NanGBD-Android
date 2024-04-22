@@ -50,6 +50,13 @@ NanGBD 系列支持 Windows、Linux、Mac、Android、iOS、ARM 全平台。
 整个核心代码分为 app 端（java 层）和 library 端（cpp 层）。  
 **注：cpp 编译库都位于 library/src/main/jniLibs/ 对应架构目录下。**
 
+0. 准备环境
+   * 安装 Android Studio 工具 和 java8 + 环境。
+   * 修改 local.properties 中的 sdk.dir（安卓 sdk 路径）与 ndk.dir（安卓 ndk 路径），如：
+     `sdk.dir=/Users/Nanuns/Library/Android/sdk`
+     `ndk.dir=/Users/Nanuns/Library/Android/sdk/ndk-bundle`
+
+
 1. 编译 osip 与 eXosip  
    安卓端编译 FFmpeg 相关这里就不展开，可自行摸索编译。注意 osip 和 eXosip 版本一定要对应，否则可能会出现不兼容的情况。我们这里选择 osip2-5.3.0 和 eXosip2-5.3.0。
    可参考 [eXosip](https://github.com/xueqing/exosip) 和 [eXosip 交叉编译](https://blog.csdn.net/zhuyunier/article/details/79085345)
