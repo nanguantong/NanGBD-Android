@@ -1,0 +1,16 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="float_btn_height">40dp</dimen>
+    <dimen name="float_btn_width">40dp</dimen>
+
+    <dimen name="video_input_dialog_width">120dp</dimen>
+    <dimen name="video_input_dialog_height">100dp</dimen>
+    <dimen name="video_input_dialog_block_height">146dp</dimen>
+    <dimen name="video_input_dialog_item_height">48dp</dimen>
+    <dimen name="video_input_dialog_divider_width">110dp</dimen>
+    <dimen name="video_input_dialog_divider_height">1dp</dimen>
+    <dimen name="video_input_dialog_arrow_width">28dp</dimen>
+    <dimen name="video_input_dialog_arrow_height">14dp</dimen>
+</resources>
