@@ -130,9 +130,9 @@ typedef struct ua_core {
     char *rec_path;   // 录像目录
 } uacore_t;
 
-static uacore_t g_core;
-static ua_config_t* g_config_ua = NULL;
-static gm_t* g_gm = NULL;
+uacore_t g_core;
+ua_config_t* g_config_ua = NULL;
+gm_t* g_gm = NULL;
 static uint32_t g_sn = 0;
 static int g_ssrc_index = 1;
 
