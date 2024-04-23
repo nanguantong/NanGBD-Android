@@ -6,7 +6,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-yellow.svg)](https://github.com/nanguantong/NanGBD-Android/pulls)
 
 NanGBD-Android（即 Nanuns GB Device，国标设备端）是一套支持 GB/T 28181 和 GB 35114 [国标协议](https://github.com/nanguantong/GB-Doc)的安卓设备端应用。  
-NanGBD 系列支持 Windows、Linux、Mac、Android、iOS、ARM 全平台。
+NanGBD 和 [NanGBS](https://github.com/nanguantong/NanGBS)（即 Nanuns GB Server，国标平台端） 系列支持 Windows、Linux、Mac、Android、iOS、ARM 全平台。
 
 
 # 应用场景
