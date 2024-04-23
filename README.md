@@ -59,7 +59,7 @@ NanGBD 和 [NanGBS](https://github.com/nanguantong/NanGBS)（即 Nanuns GB Serve
 
 
 1. 编译 osip 与 eXosip  
-   安卓端编译 FFmpeg 相关这里就不展开，可自行摸索编译。注意 osip 和 eXosip 版本一定要对应，否则可能会出现不兼容的情况。我们这里选择 osip2-5.3.0 和 eXosip2-5.3.0。
+   安卓端交叉编译 osip 与 eXosip 相关这里就不展开，可自行摸索编译。注意 osip 和 eXosip 版本一定要对应，否则可能会出现不兼容的情况。我们这里选择 osip2-5.3.0 和 eXosip2-5.3.0。
    可参考 [eXosip](https://github.com/xueqing/exosip) 和 [eXosip 交叉编译](https://blog.csdn.net/zhuyunier/article/details/79085345)
 
 
