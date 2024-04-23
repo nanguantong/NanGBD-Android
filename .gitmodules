@@ -1,4 +1,4 @@
-[submodule "NanGBD-Android/library/src/main/cpp/gmssl"]
-	path = NanGBD-Android/library/src/main/cpp/gmssl
+[submodule "library/src/main/cpp/gmssl"]
+	path = library/src/main/cpp/gmssl
 	url = https://github.com/guanzhi/GmSSL/
 	branch = GmSSL-v2
