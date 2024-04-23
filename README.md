@@ -75,6 +75,10 @@ NanGBD 和 [NanGBS](https://github.com/nanguantong/NanGBS)（即 Nanuns GB Serve
    安卓端交叉编译 FFmpeg 相关这里就不展开，可自行摸索编译。注意我们这里使用版本 FFmpeg-v4.3.1，增加了 mediacodec 硬件编解码模块，且支持 H265。
 
 
+4. 编译项目
+   根目录下运行 `./gradlew assembleRelease`，即可生成 Apk（位于 /app/build/outputs/apk/release/ 目录下）和 Sdk（library/build/outputs/aar/ 目录下）包。
+
+
 ### 依赖库
 
 * [GmSSL](https://github.com/guanzhi/GmSSL) 用于 GB 35114 SIP 安全信令交互
