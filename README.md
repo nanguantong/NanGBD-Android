@@ -77,7 +77,7 @@ NanGBD 和 [NanGBS](https://github.com/nanguantong/NanGBS)（即 Nanuns GB Serve
 
 
 4. 编译项目  
-   根目录下运行 `./gradlew assembleRelease`，即可生成 Apk（位于 /app/build/outputs/apk/release/ 目录下）和 Sdk（library/build/outputs/aar/ 目录下）包。
+   根目录下运行 `./gradlew assembleRelease`，即可生成 Apk（位于 app/build/outputs/apk/release/ 目录下）和 Sdk（library/build/outputs/aar/ 目录下）包。
 
 
 ### 依赖库
