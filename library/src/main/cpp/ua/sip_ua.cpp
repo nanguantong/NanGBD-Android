@@ -3254,8 +3254,10 @@ int ua_set_mobilepos(ua_mobilepos_t* mobilepos)
     mp.altitude = mobilepos->altitude;
     g_core.mobilepos.pos.store(mp);
 
-    g_config_ua->longitude = mobilepos->longitude;
-    g_config_ua->latitude = mobilepos->latitude;
+    if (NULL != g_config_ua) {
+        g_config_ua->longitude = mobilepos->longitude;
+        g_config_ua->latitude = mobilepos->latitude;
+    }
 
     return 0;
 }
