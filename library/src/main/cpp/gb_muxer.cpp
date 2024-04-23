@@ -575,7 +575,7 @@ void* GB28181Muxer::startMux(void *obj) {
 
         LOGD("frame num %d", gb_muxer->codec_ctx->frame_number);
         // TODO: 对视频帧 NALU 做 35114 签名和加密处理，B/C级，这里有需要的朋友可以联系我们
-        if (g_config_ua->gm_level > 1) {
+        if (/*g_config_ua->gm_level > 1*/0) {
 
         }
 
