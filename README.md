@@ -27,6 +27,7 @@ NanGBD 和 [NanGBS](https://github.com/nanguantong/NanGBS)（即 Nanuns GB Serve
 - [X]  设备摄像头或屏幕、麦克风采集与推流
 - [X]  设备视频参数配置，如帧率、码率、分辨率
 - [X]  设备PS/H264/H265封装流、音频G711A编码
+- [X]  支持 H264、H265 软硬编解码
 - [X]  设备实时取流
 - [X]  设备录制、取历史流
 - [X]  设备公网/内网语音对讲
