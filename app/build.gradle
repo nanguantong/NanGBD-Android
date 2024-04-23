@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        release {
+            storeFile file('..\\keystore\\nangbd.jks')
+            storePassword 'admin123456789'
+            keyAlias 'nangbd'
+            keyPassword 'admin123456789'
+        }
+    }
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.example.nan.gb28181_android"
+        minSdkVersion 21
+        //noinspection ExpiredTargetSdkVersion
+        targetSdkVersion 26
+        versionCode 238001
+        versionName 'v1.0.23'
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.release
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFile getDefaultProguardFile('proguard-android-optimize.txt')
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            // buildType.name + "-" +
+            outputFileName = "NanGBD-" + defaultConfig.versionName + "." + defaultConfig.versionCode + ".apk"
+        }
+    }
+
+    // Error: Google Play requires that apps target API level 26 or higher.
+    lintOptions {
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+}
+
+dependencies {
+    implementation project(path: ':library')
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3' // 2.0.4
+    implementation 'com.squareup:otto:1.3.8'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.alibaba:fastjson:1.1.68.android'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}

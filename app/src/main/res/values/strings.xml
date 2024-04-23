@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">NanGBD-Android</string>
+    <string name="version">NanGBD-v1.0.23.238001</string>
+    <string name="record">开始录制</string>
+    <string name="register">注册</string>
+    <string name="settings">设置</string>
+    <string name="videoinput">切换视频源</string>
+
+    <string-array name="video_input_array">
+        <item>屏幕共享</item>
+        <item>摄像头</item>
+    </string-array>
+</resources>

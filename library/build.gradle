@@ -1,0 +1,84 @@
+apply plugin: 'com.android.library'
+
+android {
+    signingConfigs {
+        release {
+            storeFile file('..\\keystore\\nangbd.jks')
+            storePassword 'admin123456789'
+            keyAlias 'nangbd'
+            keyPassword 'admin123456789'
+        }
+    }
+    compileSdkVersion 26
+
+    defaultConfig {
+        minSdkVersion 21
+        // error: resource android:attr/fontVariationSettings not found
+        //noinspection ExpiredTargetSdkVersion
+        targetSdkVersion 26
+        versionCode 238001
+        versionName 'v1.0.23'
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a"
+            //, "x86", "x86_64", "mips"
+        }
+
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++11" // -fstack-protector-all
+                arguments '-DANDROID_TOOLCHAIN=clang',
+                          '-DANDROID_STL=c++_static',
+                          '-DANDROID_STL=c++_shared', // stlport_shared
+                          '-DANDROID_PLATFORM=android-21'
+            }
+        }
+        signingConfig signingConfigs.release
+    }
+
+    // https://developer.android.com/studio/build/shrink-code
+    buildTypes {
+        debug {
+            jniDebuggable true
+            jniDebuggable = true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            shrinkResources false
+            proguardFile getDefaultProguardFile('proguard-android-optimize.txt')
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+
+    sourceSets {
+        main {
+            // let gradle pack the shared library into apk
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
+    }
+
+    // Error: Google Play requires that apps target API level 26 or higher.
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.squareup:otto:1.3.8'
+    implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '3.10.0'
+    implementation group: 'com.alibaba', name: 'fastjson', version: '1.1.68.android'
+//    implementation 'com.google.android.things.contrib:driver-gps:1.1'
+
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+}
