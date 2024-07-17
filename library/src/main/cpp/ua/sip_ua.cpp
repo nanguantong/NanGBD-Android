@@ -3165,6 +3165,11 @@ void ua_on_config_changed(int changed)
 
 int ua_get_device_cert(char cert[], int size)
 {
+    if (g_core.config_ua->gm_level <= 0) {
+        LOGE("gm disabled to get cert");
+        return -1;
+    }
+
     FILE *fp = fopen(CERT_PUB_FILE, "r");
     if (NULL == fp) {
         return -1;
@@ -3183,6 +3188,11 @@ int ua_set_server_cert(const char* server_id, const char* cert, int is_file, cha
 {
     X509 *x509_cert;
     EVP_PKEY *pkey;
+
+    if (g_core.config_ua->gm_level <= 0) {
+        LOGE("gm disabled to set server cert %s", server_id);
+        return -1;
+    }
 
     x509_cert = gm_get_x509(cert, is_file, passin);
     if (NULL == x509_cert) {
